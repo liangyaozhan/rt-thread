@@ -289,7 +289,7 @@ void rt_hw_console_init(void)
 
 
     /* install  keyboard isr */
-    rt_hw_interrupt_install(INTKEYBOARD, rt_console_isr, RT_NULL);
+    rt_hw_interrupt_install(INTKEYBOARD, rt_console_isr, RT_NULL, "");
     rt_hw_interrupt_umask(INTKEYBOARD);
 
     console_device.type 		= RT_Device_Class_Char;

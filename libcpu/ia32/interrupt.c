@@ -93,7 +93,7 @@ void rt_hw_interrupt_mask(int vector)
 	outb(IO_PIC2+1, (char)(irq_mask_8259A >> 8));
 }
 
-void rt_hw_interrupt_install(int vector, rt_isr_handler_t new_handler, rt_isr_handler_t *old_handler)
+void rt_hw_interrupt_install(int vector, rt_isr_handler_t new_handler, rt_isr_handler_t *old_handler, const char *name )
 {
 	if(vector < MAX_HANDLERS)
 	{

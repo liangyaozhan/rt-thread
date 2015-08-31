@@ -47,7 +47,7 @@ void rt_hw_board_init(void)
 	outb(IO_TIMER1, TIMER_DIV(RT_TICK_PER_SECOND) / 256);
 
 	/* install interrupt handler */
-	rt_hw_interrupt_install(INTTIMER0, rt_timer_handler, RT_NULL);
+	rt_hw_interrupt_install(INTTIMER0, rt_timer_handler, RT_NULL, "");
 	rt_hw_interrupt_umask(INTTIMER0);
 
 #ifdef RT_USING_HOOK
